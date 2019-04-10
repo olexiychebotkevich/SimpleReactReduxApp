@@ -36,7 +36,7 @@ export default class NewPost extends Component{
                 <form onSubmit={this.handleSubmit}>
 
                 <div className="form-group">
-                <input type="text" placeholder="Title" name="title" className="form-controll" onChange={this.onChange} value={this.state.title}/>
+                <input type="text" placeholder="Title" name="title" className="form-controll" onChange={this.handleInputChange} value={this.state.title}/>
                 </div>
 
                 <div className="form-group">
@@ -46,7 +46,7 @@ export default class NewPost extends Component{
                 placeholder="Body"
                 name="body"
                 className="form-controll"
-                onChange={this.onChange}
+                onChange={this.handleInputChange}
                 value = {this.state.body}/>
                 </div>
 
