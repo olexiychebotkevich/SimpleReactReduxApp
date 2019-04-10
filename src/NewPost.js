@@ -52,7 +52,7 @@ export default class NewPost extends Component{
 
                 <div className="form-group">
                 <button type="submit" className="btn btn-primary">Add new post</button>
-                <button type="reset" className=" btn btn-warning">Reset form</button>
+                <button type="reset" onReset={() => this.handleReset()} className=" btn btn-warning">Reset form</button>
 
                 </div>
                 </form>
