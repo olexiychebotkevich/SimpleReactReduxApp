@@ -1,5 +1,5 @@
-import uuidv4 from 'uuid/v4'
-import {ADD_POST,DELETE_POST} from '.types';
+import uuidv4 from 'uuid/v4';
+import { ADD_POST, DELETE_POST } from './types';
 
 
 export const createPost = ({title,body}) =>({
@@ -14,9 +14,9 @@ payload:{
 });
 
 
-export const DELETE_POST = id =>({
-type:DELETE_POST,
-payload:{
-    id
-}
+export const deletePost = id => ({
+    type: DELETE_POST,
+    payload: {
+        id
+    }
 });

@@ -25,6 +25,7 @@ export default class NewPost extends Component{
         event.preventDefault();
         if(this.state.title.trim() && this.state.body.trim()){
             console.log(this.state);
+            this.props.onAddPost(this.state);
             this.handleReset();
         }
     }
@@ -37,6 +38,7 @@ export default class NewPost extends Component{
 
                 <div className="form-group">
                 <input type="text" placeholder="Title" name="title" className="form-controll" onChange={this.handleInputChange} value={this.state.title}/>
+                
                 </div>
 
                 <div className="form-group">
@@ -52,7 +54,7 @@ export default class NewPost extends Component{
 
                 <div className="form-group">
                 <button type="submit" className="btn btn-primary">Add new post</button>
-                <button type="reset" onReset={() => this.handleReset()} className=" btn btn-warning">Reset form</button>
+                <button type="reset" className="btn btn-warning" onReset={ () =>  this.handleReset()} >Reset form</button>
 
                 </div>
                 </form>

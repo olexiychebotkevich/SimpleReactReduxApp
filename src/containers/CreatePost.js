@@ -1,6 +1,7 @@
-import {connect} from 'redux'
-import {createPost} from '../actions'
-import {NewPost} from '../NewPost'
+    
+import { connect } from 'react-redux';
+import { createPost } from '../actions';
+import NewPost from '../NewPost';
 
 const mapDispatchToProps=dispatch=>{
     return{
